@@ -1,0 +1,10 @@
+{
+  "environments": {
+    "test": {
+      "scripts": {
+        "test-setup": "python bot.py",
+        "test": "bot ."
+      }
+    }
+  }
+}

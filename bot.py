@@ -12,7 +12,8 @@ async def give(ctx, arg):  # создаем асинхронную фунцию 
 @bot.command(pass_context=True)
 async def add(ctx, arg):  # создаем асинхронную фунцию бота
     await ctx.send("добавил"+arg)  # отправляем обратно аргумn
-    list.append(arg)
+    el=arg
+    list.append(el)
 
 
 bot.run(TOKEN)

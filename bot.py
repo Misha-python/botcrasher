@@ -13,7 +13,7 @@ async def give(ctx, arg):  # создаем асинхронную фунцию 
 async def add(ctx, arg):  # создаем асинхронную фунцию бота
     await ctx.send("добавил"+arg)  # отправляем обратно аргумn
     el=arg
-    list.append(el)
+    list.append("el")
 
 
 bot.run(TOKEN)

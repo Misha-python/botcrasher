@@ -1,7 +1,7 @@
 import discord
 import random
 from discord.ext import commands
-e=[]
+list=[]
 TOKEN = 'NzcxOTkzOTI5MjgxMTc1NjAy.X50NXw.apT66sMXaojNSdduBMgTQ0xR9N0'
 bot = commands.Bot(command_prefix='!')
 
@@ -12,7 +12,7 @@ async def give(ctx, arg):  # создаем асинхронную фунцию 
 @bot.command(pass_context=True)
 async def add(ctx, arg):  # создаем асинхронную фунцию бота
     await ctx.send("добавил"+arg)  # отправляем обратно аргумn
-    e.append(arg)
+    list.append(arg)
 
 
 bot.run(TOKEN)

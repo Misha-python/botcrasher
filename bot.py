@@ -7,7 +7,7 @@ bot = commands.Bot(command_prefix='!')
 
 sp=['1','e','y','r','u','df','y','5','7','s']
 @bot.command(pass_context=True)  # разрешаем передавать агрументы
-async def test(ctx, arg):  # создаем асинхронную фунцию бота
+async def test(ctx):  # создаем асинхронную фунцию бота
     await ctx.send(random.choice(sp)  # отправляем обратно аргумент
 
 

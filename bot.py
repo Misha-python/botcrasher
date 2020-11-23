@@ -12,7 +12,7 @@ async def minecraft(ctx):
     idd = ctx.message.author.id
     await ctx.send(idd)
     if idd == 704560097610825828:
-        await ctx.send(random.choice(listok))  # отправляем обратно аргумент
+        await ctx.author.send(random.choice(listok))  # отправляем обратно аргумент
     else:
         await ctx.send("не хубка")
 @bot.command(pass_context=True)

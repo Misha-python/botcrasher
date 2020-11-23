@@ -1,7 +1,7 @@
 import discord
 import random
 from discord.ext import commands
-listok=[]
+listok = []
 TOKEN = 'NzcxOTkzOTI5MjgxMTc1NjAy.X50NXw.apT66sMXaojNSdduBMgTQ0xR9N0'
 bot = commands.Bot(command_prefix='!')
 

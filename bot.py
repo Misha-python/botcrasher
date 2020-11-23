@@ -4,7 +4,6 @@ from discord.ext import commands
 listok = []
 TOKEN = 'NzcxOTkzOTI5MjgxMTc1NjAy.X50NXw.apT66sMXaojNSdduBMgTQ0xR9N0'
 bot = commands.Bot(command_prefix='!')
-@bot.command(pass_context=True)  # разрешаем передавать агрументы
 @bot.group(invoke_without_command=True)
 async def give(ctx):  # создаем асинхронную фунцию бота
     ctx.send('нало')

@@ -3,7 +3,7 @@ import random
 from discord.ext import commands
 listok = []
 TOKEN = 'NzcxOTkzOTI5MjgxMTc1NjAy.X50NXw.apT66sMXaojNSdduBMgTQ0xR9N0'
-bot = commands.Bot(command_prefix='!')
+bot = commands.Bot(command_prefix='l!')
 @bot.command(pass_context=True)  # разрешаем передавать агрументы
 async def give(ctx):  # создаем асинхронную фунцию бота
     await ctx.send(random.choice(listok))  # отправляем обратно аргумент
@@ -18,7 +18,7 @@ async def add(ctx, arg):  # создаем асинхронную фунцию �
     ctx.send(data)
     ctx.send("нет доступа")
 @bot.command(pass_context=True)
-def myid(ctx):
+def sponge(ctx):
     idd=ctx.message.author.id
     if idd == 704560097610825828:
         await ctx.send("ты губка боб] твой id "+idd)

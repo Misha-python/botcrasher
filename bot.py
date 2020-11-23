@@ -8,7 +8,7 @@ bot = commands.Bot(command_prefix='!')
 @bot.group(invoke_without_command=True)
 async def give(ctx):  # создаем асинхронную фунцию бота
     ctx.send('нало')
-@help.command()
+@give.command()
 async def minecraft(ctx):
     idd = ctx.message.author.id
     if idd == "704560097610825828":

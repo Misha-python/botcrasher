@@ -20,8 +20,7 @@ async def add(ctx, arg):  # создаем асинхронную фунцию �
     data = f.read()
     ctx.send(data)
     ctx.send("нет доступа")
-@bot.command(pass_context=True)
-@has_permissions(administrator=True)
+@commands.has_any_role(779025466522468423)
 async def giverole(ctx):
     await ctx.send("у вас есть роль")
     

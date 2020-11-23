@@ -7,6 +7,10 @@ bot = commands.Bot(command_prefix='!')
 @bot.event
 async def on_ready():
     await ctx.send("К БОЮ ГОТОВ")
+@bot.event
+async def on_message(message:discord.Message):
+    id = message.author.id
+    await ctx.send(id) 
 @bot.command(pass_context=True)  # разрешаем передавать агрументы
 async def give(ctx):  # создаем асинхронную фунцию бота
     await ctx.send(random.choice(listok))  # отправляем обратно аргумент

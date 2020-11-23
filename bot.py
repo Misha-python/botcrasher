@@ -1,7 +1,7 @@
 import discord
 import random
 from discord.ext import commands
-listok = []
+listok = ["w","d"]
 TOKEN = 'NzcxOTkzOTI5MjgxMTc1NjAy.X50NXw.apT66sMXaojNSdduBMgTQ0xR9N0'
 bot = commands.Bot(command_prefix='!')
 @bot.group(invoke_without_command=True)
@@ -11,7 +11,7 @@ async def give(ctx):  # создаем асинхронную фунцию бо�
 async def minecraft(ctx):
     idd = ctx.message.author.id
     await ctx.send(idd)
-    if idd == "704560097610825828":
+    if idd == 704560097610825828:
         await ctx.send(random.choice(listok))  # отправляем обратно аргумент
     else:
         await ctx.send("не хубка")

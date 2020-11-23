@@ -17,11 +17,6 @@ async def add(ctx, arg):  # создаем асинхронную фунцию �
     data = f.read()
     ctx.send(data)
     ctx.send("нет доступа")
-@bot.command(pass_context=True)
-def sponge(ctx):
-    idd=ctx.message.author.id
-    if idd == 704560097610825828:
-   
 @client.command(pass_context=True)
 @commands.has_role("чист")
     async def id(ctx, user: discord.Member):

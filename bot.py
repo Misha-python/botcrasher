@@ -25,7 +25,7 @@ def sponge(ctx):
 @client.command(pass_context=True)
 @commands.has_role("чист")
     async def id(ctx, user: discord.Member):
-       await ctx.send("не губкам слова не давали")
+        await ctx.send("не губкам слова не давали")
        
     
     

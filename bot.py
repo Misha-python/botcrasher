@@ -6,10 +6,11 @@ TOKEN = 'NzcxOTkzOTI5MjgxMTc1NjAy.X50NXw.apT66sMXaojNSdduBMgTQ0xR9N0'
 bot = commands.Bot(command_prefix='!')
 @bot.group(invoke_without_command=True)
 async def give(ctx):  # создаем асинхронную фунцию бота
-    ctx.send('нало')
+    await ctx.send('нало')
 @give.command()
 async def minecraft(ctx):
     idd = ctx.message.author.id
+    await ctx.send(idd)
     if idd == "704560097610825828":
         await ctx.send(random.choice(listok))  # отправляем обратно аргумент
     else:
@@ -22,7 +23,7 @@ async def add(ctx, arg):  # создаем асинхронную фунцию �
     f = open("accs.txt","r+")
     ctx.send(*f)
     data = f.read()
-    ctx.send(data)
+    await ctx.send(data)
 
 
             

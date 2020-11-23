@@ -20,11 +20,10 @@ async def add(ctx, arg):  # создаем асинхронную фунцию �
 @bot.command(pass_context=True)
 async def myid(ctx):
     idd=ctx.message.author.id
-    await ctx.send("{} is your id".format(idd))
     if idd ==704560097610825828:
-        ctx.send("ты губка боб]")
+        await ctx.send("ты губка боб] твой id "+idd)
     else:
-        ctx.send("не губкам слова не давали!")
+        await ctx.send("не губкам слова не давали! твой id "+idd)
     
     
 bot.run(TOKEN)

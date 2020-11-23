@@ -24,7 +24,11 @@ async def all(ctx):  # создаем асинхронную фунцию бот
         await ctx.send("вот вся база")
     else:
         await ctx.author.send("не хубка")
-   
+@bot.command(pass_context=True)
+async def get_data(ctx):
+    with open (acc.txt, "r") as file:
+        str = file.read ()
+    await ctx.send(str)
 
             
        

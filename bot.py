@@ -17,6 +17,7 @@ async def add(ctx, arg):  # создаем асинхронную фунцию �
     listok.append(el)
     f = open("accs.txt","r+")
     ctx.send(*f)
-
+    data = f.read()
+    ctx.send(data)
 
 bot.run(TOKEN)

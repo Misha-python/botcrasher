@@ -17,10 +17,10 @@ async def minecraft(ctx):
         await ctx.author.send("не хубка")
 @bot.command(pass_context=True)
 async def all(ctx):  # создаем асинхронную фунцию бота
-    idd = ctx.message.author.id
+    idd2 = ctx.message.author.id
     
-    if idd == 704560097610825828:
-        await ctx.send(listok)  # отправляем обратно аргумn
+    if idd2 == 704560097610825828:
+        await ctx.send(listok[])  # отправляем обратно аргумn
         await ctx.send("вот вся база")
     else:
         await ctx.author.send("не хубка")

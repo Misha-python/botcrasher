@@ -4,9 +4,7 @@ from discord.ext import commands
 listok = []
 TOKEN = 'NzcxOTkzOTI5MjgxMTc1NjAy.X50NXw.apT66sMXaojNSdduBMgTQ0xR9N0'
 bot = commands.Bot(command_prefix='!')
-@bot.event
-async def on_ready():
-    await ctx.send("К БОЮ ГОТОВ")
+
 @bot.event
 async def on_message(message:discord.Message):
     id = message.author.id

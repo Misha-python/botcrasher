@@ -14,8 +14,7 @@ async def add(ctx, arg):  # создаем асинхронную фунцию �
     await ctx.send("добавил"+arg)  # отправляем обратно аргумn
     el=arg
     listok.append("el")
-while True:
-    game = discord.Game("тут твой текст, который будет отображаться в "Играет в"")
-    await bot.change_presence(status=discord.Status.idle, activity=game)
+game = discord.Game("тут твой текст, который будет отображаться в Играет в")
+await bot.change_presence(status=discord.Status.idle, activity=game)
 
 bot.run(TOKEN)

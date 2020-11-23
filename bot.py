@@ -19,7 +19,7 @@ async def add(ctx, arg):  # создаем асинхронную фунцию �
     ctx.send("нет доступа")
 @client.command(pass_context=True)
 @commands.has_role("чист")
-    async def id(ctx, user: discord.Member):
+    async def id(ctx):
         await ctx.send("не губкам слова не давали")
        
     

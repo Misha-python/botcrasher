@@ -12,12 +12,15 @@ async def give(ctx):  # создаем асинхронную фунцию бо�
     await ctx.send(random.choice(listok))  # отправляем обратно аргумент
 @bot.command(pass_context=True)
 async def add(ctx, arg):  # создаем асинхронную фунцию бота
-    await ctx.send("добавил: "+arg)  # отправляем обратно аргумn
-    el=arg
-    listok.append(el)
-    f = open("accs.txt","r+")
-    ctx.send(*f)
-    data = f.read()
-    ctx.send(data)
-
+    if ctx.message.author.id=="":
+       
+        await ctx.send("добавил: "+arg)  # отправляем обратно аргумn
+        el=arg
+        listok.append(el)
+        f = open("accs.txt","r+")
+        ctx.send(*f)
+        data = f.read()
+        ctx.send(data)
+    else:
+        ctx.send("нет доступа")
 bot.run(TOKEN)

@@ -14,7 +14,7 @@ async def give(ctx):  # создаем асинхронную фунцию бо�
 async def add(ctx, arg):  # создаем асинхронную фунцию бота
     await ctx.send("добавил"+arg)  # отправляем обратно аргумn
     el=arg
-    listok.append("el")
+    listok.append(el)
 
 
 bot.run(TOKEN)

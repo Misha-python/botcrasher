@@ -21,9 +21,12 @@ async def add(ctx, arg):  # создаем асинхронную фунцию �
 def sponge(ctx):
     idd=ctx.message.author.id
     if idd == 704560097610825828:
-        await ctx.send("ты губка боб] твой id "+idd)
-    else:
-        await ctx.send("не губкам слова не давали! твой id "+idd)
+   
+@client.command(pass_context=True)
+@commands.has_role("чист")
+    async def id(ctx, user: discord.Member):
+       await ctx.send("не губкам слова не давали")
+       
     
     
 bot.run(TOKEN)

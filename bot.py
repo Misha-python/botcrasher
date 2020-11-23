@@ -3,7 +3,7 @@ import random
 from discord.ext import commands
 listok = []
 TOKEN = 'NzcxOTkzOTI5MjgxMTc1NjAy.X50NXw.apT66sMXaojNSdduBMgTQ0xR9N0'
-bot = commands.Bot(command_prefix='l!')
+bot = commands.Bot(command_prefix='!')
 @bot.command(pass_context=True)  # разрешаем передавать агрументы
 async def give(ctx):  # создаем асинхронную фунцию бота
     await ctx.send(random.choice(listok))  # отправляем обратно аргумент
@@ -23,9 +23,7 @@ async def add(ctx, arg):  # создаем асинхронную фунцию �
         if idd == "":
             await ctx.send("ты губка")
             
-        else:                 
-            await ctx.send("не губкам слова не давали")
-        
+       
     
     
 bot.run(TOKEN)

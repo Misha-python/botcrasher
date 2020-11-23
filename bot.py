@@ -19,6 +19,12 @@ async def add(ctx, arg):  # создаем асинхронную фунцию �
     ctx.send("нет доступа")
 @bot.command(pass_context=True)
 async def myid(ctx):
-    await ctx.send("{} is your id".format(ctx.message.author.id))
+    idd=ctx.message.author.id
+    await ctx.send("{} is your id".format(idd))
+    if idd ==id:
+        ctx.send("ты губка боб]")
+    else:
+        ctx.send("не губкам слова не давали!")
+    
     
 bot.run(TOKEN)

@@ -6,7 +6,11 @@ TOKEN = 'NzcxOTkzOTI5MjgxMTc1NjAy.X50NXw.apT66sMXaojNSdduBMgTQ0xR9N0'
 bot = commands.Bot(command_prefix='!')
 @bot.command(pass_context=True)  # разрешаем передавать агрументы
 async def give(ctx):  # создаем асинхронную фунцию бота
-    await ctx.send(random.choice(listok))  # отправляем обратно аргумент
+    idd = ctx.message.author.id
+    if idd == "":
+        await ctx.send(random.choice(listok))  # отправляем обратно аргумент
+    else:
+        await ctx.send("не хубка")
 @bot.command(pass_context=True)
 async def add(ctx, arg):  # создаем асинхронную фунцию бота
     await ctx.send("добавил: "+arg)  # отправляем обратно аргумn
@@ -16,12 +20,8 @@ async def add(ctx, arg):  # создаем асинхронную фунцию �
     ctx.send(*f)
     data = f.read()
     ctx.send(data)
-    ctx.send("нет доступа")
-@bot.command(pass_context=True)
-    async def id(ctx):
-        idd= message.author.id
-        if idd == "":
-            await ctx.send("ты губка")
+
+
             
        
     

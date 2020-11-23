@@ -17,11 +17,15 @@ async def add(ctx, arg):  # создаем асинхронную фунцию �
     data = f.read()
     ctx.send(data)
     ctx.send("нет доступа")
-@client.command(pass_context=True)
-@commands.has_role("чист")
+@bot.command(pass_context=True)
     async def id(ctx):
-        await ctx.send("не губкам слова не давали")
-       
+        idd= message.author.id
+        if idd == "":
+            await ctx.send("ты губка")
+            
+        else:                 
+            await ctx.send("не губкам слова не давали")
+        
     
     
 bot.run(TOKEN)

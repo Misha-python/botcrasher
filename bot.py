@@ -20,7 +20,7 @@ async def add(ctx, arg):  # создаем асинхронную фунцию �
     data = f.read()
     ctx.send(data)
     ctx.send("нет доступа")
-@client.command(name=giverole, pass_context=True)
+@bot.command(pass_context=True)
 @has_permissions(administrator=True)
 async def giverole(ctx):
     await ctx.send("у вас есть роль")

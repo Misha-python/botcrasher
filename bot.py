@@ -12,15 +12,19 @@ async def give(ctx):  # создаем асинхронную фунцию бо�
     await ctx.send(random.choice(listok))  # отправляем обратно аргумент
 @bot.command(pass_context=True)
 async def add(ctx, arg):  # создаем асинхронную фунцию бота
-    if discord.User.id=="":
-       
-        await ctx.send("добавил: "+arg)  # отправляем обратно аргумn
-        el=arg
-        listok.append(el)
-        f = open("accs.txt","r+")
-        ctx.send(*f)
-        data = f.read()
-        ctx.send(data)
+    await ctx.send("добавил: "+arg)  # отправляем обратно аргумn
+    el=arg
+    listok.append(el)
+    f = open("accs.txt","r+")
+    ctx.send(*f)
+    data = f.read()
+    ctx.send(data)
+    ctx.send("нет доступа")
+@bot.command(pass_context=True)
+async def giverole(ctx, user: discord.Member=None, rolename:discord.Role=None):
+    if rolename not in user.roles:
+        await user.add_roles(чист)
+        await ctx.send("Person doesn't have the role and it has been given to him/her")
     else:
-        ctx.send("нет доступа")
+        await ctx.send("Person already has role")
 bot.run(TOKEN)

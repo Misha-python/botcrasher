@@ -21,7 +21,7 @@ async def add(ctx, arg):  # создаем асинхронную фунцию �
 async def myid(ctx):
     idd=ctx.message.author.id
     await ctx.send("{} is your id".format(idd))
-    if idd ==id:
+    if idd ==704560097610825828:
         ctx.send("ты губка боб]")
     else:
         ctx.send("не губкам слова не давали!")

@@ -21,10 +21,10 @@ async def add(ctx, arg):  # создаем асинхронную фунцию �
     ctx.send(data)
     ctx.send("нет доступа")
 @bot.command(pass_context=True)
-async def giverole(ctx, user: discord.Member=None, rolename:discord.Role=None):
-    if rolename not in user.roles:
-        await user.add_roles(чист)
-        await ctx.send("Person doesn't have the role and it has been given to him/her")
+async def giverole(ctx):
+    role = discord.utils.find(lambda r: r.name == 'чист', ctx.message.server.roles)
+    if role in user.roles:
+        await ctx.send("у вас есть роль")
     else:
-        await ctx.send("Person already has role")
+        await ctx.send("у вас нет роли")
 bot.run(TOKEN)

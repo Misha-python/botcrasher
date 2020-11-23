@@ -20,7 +20,7 @@ async def all(ctx):  # создаем асинхронную фунцию бот
     idd2 = ctx.message.author.id
     
     if idd2 == 704560097610825828:
-        await ctx.send(listok[])  # отправляем обратно аргумn
+        await ctx.send(listok)  # отправляем обратно аргумn
         await ctx.send("вот вся база")
     else:
         await ctx.author.send("не хубка")

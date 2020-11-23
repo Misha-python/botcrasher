@@ -12,7 +12,7 @@ async def give(ctx):  # создаем асинхронную фунцию бо�
     await ctx.send(random.choice(listok))  # отправляем обратно аргумент
 @bot.command(pass_context=True)
 async def add(ctx, arg):  # создаем асинхронную фунцию бота
-    if ctx.message.author.id=="":
+    if discord.User.id=="":
        
         await ctx.send("добавил: "+arg)  # отправляем обратно аргумn
         el=arg

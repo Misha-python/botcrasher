@@ -7,7 +7,7 @@ bot = commands.Bot(command_prefix='!')
 @bot.command(pass_context=True)  # разрешаем передавать агрументы
 async def give(ctx):  # создаем асинхронную фунцию бота
     idd = ctx.message.author.id
-    if idd == "":
+    if idd == "704560097610825828":
         await ctx.send(random.choice(listok))  # отправляем обратно аргумент
     else:
         await ctx.send("не хубка")

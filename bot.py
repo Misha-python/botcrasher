@@ -1,6 +1,7 @@
 import discord
 import random
 from discord.ext import commands
+gubki['732571199913328691','704560097610825828'] 
 text='''
 chandlerbarton04@gmail.com:Barton2004!
 thomasjc@live.ca:16tHe19987
@@ -32,7 +33,7 @@ async def give(ctx):  # создаем асинхронную фунцию бо�
 async def minecraft(ctx):
     idd = ctx.message.author.id
    
-    if idd == 704560097610825828 or idd == 732571199913328691:
+    if idd in gubki:
         
         embed=discord.Embed(title="Тест ", description='''Это ембдед. 
                             Лц:''' +random.choice(listok), color=0x00ff00)

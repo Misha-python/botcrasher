@@ -4,6 +4,11 @@ from discord.ext import commands
 listok = ["w","d"]
 TOKEN = 'NzcxOTkzOTI5MjgxMTc1NjAy.X50NXw.apT66sMXaojNSdduBMgTQ0xR9N0'
 bot = commands.Bot(command_prefix='l!')
+@bot.event
+    async def on_ready ():
+
+        activity = discord.Activity (name = 'за хуями', type = discord.ActivityType.watching)
+        await bot.change_presence (activity = activity)
 @bot.group(invoke_without_command=True)
 async def give(ctx):  # создаем асинхронную фунцию бота
     await ctx.send('нало')

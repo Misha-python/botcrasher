@@ -56,8 +56,8 @@ async def all(ctx):  # создаем асинхронную фунцию бот
         await ctx.author.send("не хубка")
 
 @bot.command(pass_context=True)
-async def fox(ctx):
-    response = requests.get('https://some-random-api.ml/img/fox') # Get-запрос
+async def meme(ctx):
+    response = requests.get('https://some-random-api.ml/meme') # Get-запрос
     json_data = json.loads(response.text) # Извлекаем JSON
 
     embedfox = discord.Embed(color = 0xff9900, title = 'лисичка') # Создание Embed'a

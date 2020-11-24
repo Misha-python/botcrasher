@@ -23,7 +23,7 @@ TOKEN = 'NzcxOTkzOTI5MjgxMTc1NjAy.X50NXw.apT66sMXaojNSdduBMgTQ0xR9N0'
 bot = commands.Bot(command_prefix='l!')
 @bot.event
 async def on_ready():
-    game = discord.Game("аккаунты")
+    game = discord.Game("аккаунты и сливы")
     await bot.change_presence(status=discord.Status.idle, activity=game)
 @bot.group(invoke_without_command=True)
 async def give(ctx):  # создаем асинхронную фунцию бота
@@ -47,7 +47,7 @@ async def all(ctx):  # создаем асинхронную фунцию бот
     
     if idd2 == 704560097610825828:
          # отправляем обратно аргумn
-        await ctx.send(*listok)
+        await ctx.send(listok)
         await ctx.send("вот вся база")
     else:
         await ctx.author.send("не хубка")

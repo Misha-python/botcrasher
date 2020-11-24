@@ -26,14 +26,11 @@ async def all(ctx):  # создаем асинхронную фунцию бот
     
     if idd2 == 704560097610825828:
         await ctx.send(listok)  # отправляем обратно аргумn
+        await ctx.send(*listok)
         await ctx.send("вот вся база")
     else:
         await ctx.author.send("не хубка")
-@bot.command(pass_context=True)
-async def get_data(ctx):
-    with open (acc.txt, "r") as file:
-        str = file.read ()
-    await ctx.send(str)
+
 
             
        

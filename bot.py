@@ -37,9 +37,17 @@ async def minecraft(ctx):
    
     if idd in gubki:
         
-        embed=discord.Embed(title="Тест ", description='''Это ембдед. 
-                            Лц:''' +random.choice(listok), color=0x00ff00)
-        embed.set_author(name="Боб")
+        embed = discord.Embed(title="твоя лицезния майнкрафт. кликни по мне, чтобы перейти на скачивание оффициального лаунчера", colour=discord.Colour(0xabd10f), url="https://www.minecraft.net/ru-ru/download", description='''твоя лицуха. бери!!!
+        
+        ||'''+random.choice(listok)+'''||
+        формат: логин:пароль''')
+
+        embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/779025471252856852/780774815153520670/1606221592221_scale_1200.jpg")
+        embed.set_footer(text="bot by spongebob | acc free", icon_url="https://cdn.discordapp.com/attachments/779025471252856852/780774814687297586/1604169731070_i.jpg")
+
+        embed.add_field(name="🤔 что, если лц не сработает?", value="заменим ее!")
+        embed.add_field(name="а откуда вы их берете?", value="это секрет, но незаконного ничего!", inline=True)
+        embed.add_field(name="а сколько я могу получить?", value="безлимитно. приглашай!", inline=True)
         await ctx.author.send(embed=embed)
   # отправляем обратно аргумент
     else:

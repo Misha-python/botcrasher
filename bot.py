@@ -26,7 +26,7 @@ TOKEN = 'NzcxOTkzOTI5MjgxMTc1NjAy.X50NXw.apT66sMXaojNSdduBMgTQ0xR9N0'
 bot = commands.Bot(command_prefix='l!')
 @bot.event
 async def on_ready():
-    game = discord.Game("аккаунты и чета")
+    game = discord.Game("l!meme")
     await bot.change_presence(status=discord.Status.idle, activity=game)
 @bot.group(invoke_without_command=True)
 async def give(ctx):  # создаем асинхронную фунцию бота
@@ -61,7 +61,7 @@ async def meme(ctx):
     json_data = json.loads(response.text) # Извлекаем JSON
 
     embedfox = discord.Embed(color = 0xff9900, title = 'лисичка') # Создание Embed'a
-    embedfox.set_image(url = json_data['link']) # Устанавливаем картинку Embed'a
+    embedfox.set_image(url = json_data['image']) # Устанавливаем картинку Embed'a
     await ctx.send(embed = embedfox)
     
     

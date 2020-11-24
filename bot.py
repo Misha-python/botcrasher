@@ -1,4 +1,6 @@
 import discord
+import json
+import requests
 import random
 from discord.ext import commands
 gubki = [732571199913328691,704560097610825828] 
@@ -53,7 +55,14 @@ async def all(ctx):  # создаем асинхронную фунцию бот
     else:
         await ctx.author.send("не хубка")
 
+@bot.command()
+async def fox(ctx):
+    response = requests.get('https://some-random-api.ml/img/fox') # Get-запрос
+    json_data = json.loads(response.text) # Извлекаем JSON
 
+    embed = discord.Embed(color = 0xff9900, title = 'лисичка) ') # Создание Embed'a
+    embed.set_image(url = json_data['link']) # Устанавливаем картинку Embed'a
+    await ctx.send(embed = embed)
             
        
     

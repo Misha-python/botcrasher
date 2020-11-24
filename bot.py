@@ -60,9 +60,9 @@ async def fox(ctx):
     response = requests.get('https://some-random-api.ml/img/fox') # Get-запрос
     json_data = json.loads(response.text) # Извлекаем JSON
 
-    embed = discord.Embed(color = 0xff9900, title = 'лисичка) ') # Создание Embed'a
-    embed.set_image(url = json_data['link']) # Устанавливаем картинку Embed'a
-    await ctx.send(embed = embed)
+    embedfox = discord.Embed(color = 0xff9900, title = 'лисичка) ') # Создание Embed'a
+    embedfox.set_image(url = json_data['link']) # Устанавливаем картинку Embed'a
+    await ctx.send(embed = embedfox)
             
        
     

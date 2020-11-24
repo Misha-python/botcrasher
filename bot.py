@@ -1,7 +1,7 @@
 import discord
 import random
 from discord.ext import commands
-gubki['732571199913328691','704560097610825828'] 
+gubki = ['732571199913328691','704560097610825828'] 
 text='''
 chandlerbarton04@gmail.com:Barton2004!
 thomasjc@live.ca:16tHe19987

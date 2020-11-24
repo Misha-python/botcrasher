@@ -37,7 +37,7 @@ async def minecraft(ctx):
         embed=discord.Embed(title="Тест ", description='''Это ембдед. 
                             Лц:''' +random.choice(listok), color=0x00ff00)
         embed.set_author(name="Боб")
-        await ctx.send(embed=embed)
+        await ctx.author.send(embed=embed)
   # отправляем обратно аргумент
     else:
         await ctx.author.send("не хубка")

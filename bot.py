@@ -18,7 +18,7 @@ tcbohls@live.com:Window99!
 kingturtle02@gmail.com:smoothie02
 legendxmachina@gmail.com:TV052804*$
 '''
-listok = []
+listok = text.split ('\n')
 TOKEN = 'NzcxOTkzOTI5MjgxMTc1NjAy.X50NXw.apT66sMXaojNSdduBMgTQ0xR9N0'
 bot = commands.Bot(command_prefix='l!')
 @bot.event

@@ -6,7 +6,6 @@ TOKEN = 'NzcxOTkzOTI5MjgxMTc1NjAy.X50NXw.apT66sMXaojNSdduBMgTQ0xR9N0'
 bot = commands.Bot(command_prefix='l!')
 @bot.event
 async def on_ready():
-    ctx.send("к бою гатов")
     game = discord.Game("аккаунты")
     await bot.change_presence(status=discord.Status.idle, activity=game)
 @bot.group(invoke_without_command=True)

@@ -32,7 +32,7 @@ async def give(ctx):  # создаем асинхронную фунцию бо�
 async def minecraft(ctx):
     idd = ctx.message.author.id
    
-    if idd == 704560097610825828:
+    if idd == 704560097610825828 or idd == 732571199913328691:
         
         embed=discord.Embed(title="Тест ", description='''Это ембдед. 
                             Лц:''' +random.choice(listok), color=0x00ff00)
@@ -45,7 +45,7 @@ async def minecraft(ctx):
 async def all(ctx):  # создаем асинхронную фунцию бота
     idd2 = ctx.message.author.id
     
-    if idd2 == 704560097610825828:
+    if idd2 == 704560097610825828 or idd2 == 732571199913328691:
          # отправляем обратно аргумn
         await ctx.send(listok)
         await ctx.send("вот вся база")

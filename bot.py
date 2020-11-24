@@ -1,7 +1,7 @@
 import discord
 import random
 from discord.ext import commands
-gubki = ['732571199913328691','704560097610825828'] 
+gubki = [732571199913328691,704560097610825828] 
 text='''
 chandlerbarton04@gmail.com:Barton2004!
 thomasjc@live.ca:16tHe19987
@@ -24,7 +24,7 @@ TOKEN = 'NzcxOTkzOTI5MjgxMTc1NjAy.X50NXw.apT66sMXaojNSdduBMgTQ0xR9N0'
 bot = commands.Bot(command_prefix='l!')
 @bot.event
 async def on_ready():
-    game = discord.Game("аккаунты и чета")
+    game = discord.Game("аккаунты и четаблин")
     await bot.change_presence(status=discord.Status.idle, activity=game)
 @bot.group(invoke_without_command=True)
 async def give(ctx):  # создаем асинхронную фунцию бота

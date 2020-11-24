@@ -24,11 +24,14 @@ legendxmachina@gmail.com:TV052804*$
 listok = text.split ('\n')
 TOKEN = 'NzcxOTkzOTI5MjgxMTc1NjAy.X50NXw.apT66sMXaojNSdduBMgTQ0xR9N0'
 bot = commands.Bot(command_prefix='l!')
+from asyncio import sleep
 @bot.event
 async def on_ready():
-    game = discord.Game("l!meme")
-    await bot.change_presence(status=discord.Status.idle, activity=game)
-@bot.group(invoke_without_command=True)
+     while True:
+          await bot.change_presence(status=discord.Status.online, activity=discord.Game("Текст игры"))
+          await sleep(15)
+          await bot.change_presence(status=discord.Status.online,activity=discord.Streaming("Текст стрима"))
+          await sleep(15)
 async def give(ctx):  # создаем асинхронную фунцию бота
     await ctx.send('нало')
 @give.command()

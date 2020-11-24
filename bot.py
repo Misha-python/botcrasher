@@ -27,13 +27,8 @@ bot = commands.Bot(command_prefix='l!')
 from asyncio import sleep
 @bot.event
 async def on_ready():
-    game = discord.Game("l!meme")
-    game2 = discord.Game("l!help")
-    While True:
-        await bot.change_presence(status=discord.Status.idle, activity=game)
-        await sleep(15)
-        await bot.change_presence(status=discord.Status.idle, activity=game2)
-        await sleep(15)
+    game = discord.Game("l!help | отдам аккаунт")
+    await bot.change_presence(status=discord.Status.idle, activity=game)    
 @bot.group(invoke_without_command=True)
 async def give(ctx):  # создаем асинхронную фунцию бота
     await ctx.send('нало')

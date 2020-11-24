@@ -17,7 +17,11 @@ async def minecraft(ctx):
     idd = ctx.message.author.id
    
     if idd == 704560097610825828:
-        await ctx.author.send(random.choice(listok))  # отправляем обратно аргумент
+        
+        embed=discord.Embed(title="Тест ", description="Это ембдед. Лц:" +random.choice(listok), color=0x00ff00)
+        embed.set_author(name="Боб")
+        await ctx.send(embed=embed)
+  # отправляем обратно аргумент
     else:
         await ctx.author.send("не хубка")
 @bot.command(pass_context=True)

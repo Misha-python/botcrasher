@@ -32,7 +32,7 @@ async def give(ctx):  # создаем асинхронную фунцию бо�
 async def minecraft(ctx):
     idd = ctx.message.author.id
    
-    if idd == 704560097610825828 or idd = 732571199913328691:
+    if idd == 704560097610825828:
         
         embed=discord.Embed(title="Тест ", description='''Это ембдед. 
                             Лц:''' +random.choice(listok), color=0x00ff00)

@@ -60,7 +60,7 @@ async def meme(ctx):
     response = requests.get('https://some-random-api.ml/meme') # Get-запрос
     json_data = json.loads(response.text) # Извлекаем JSON
 
-    embedfox = discord.Embed(color = 0xff9900, title = 'лисичка') # Создание Embed'a
+    embedfox = discord.Embed(color = 0xff9900, title = json_data['caption']) # Создание Embed'a
     embedfox.set_image(url = json_data['image']) # Устанавливаем картинку Embed'a
     await ctx.send(embed = embedfox)
     

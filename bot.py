@@ -1,12 +1,4 @@
 import discord
-from firebase import Firebase
-config = {
-  "apiKey": "AIzaSyC3vGWkRWrBNLuz5YlysXZMZXGy0gT56LA",
-  "authDomain": "164893195950.firebaseapp.com",
-  "databaseURL": "https://avroraacha.firebaseio.com",
-  "storageBucket": "164893195950.appspot.com"
-}
-firebase = Firebase(config)
 import random
 import json
 import requests
@@ -29,12 +21,7 @@ async def give(ctx):  # создаем асинхронную фунцию бо�
     await ctx.send('нало')
 @give.command()
 async def minecraft(ctx):
-    idd = ctx.message.author.id
-    db = firebase.database()
-    data = {"id": idd}
-    db.child("users").push(data)
-    
-   
+    idd = ctx.message.author.id  
     if idd in gubki:
         
         embed = discord.Embed(title="твоя лицезния майнкрафт. кликни по мне, чтобы перейти на скачивание оффициального лаунчера", colour=discord.Colour(0xabd10f), url="https://www.minecraft.net/ru-ru/download", description='''твоя лицуха. бери!!!
@@ -71,6 +58,13 @@ async def meme(ctx):
     embedfox = discord.Embed(color = 0xff9900, title = json_data['caption']) # Создание Embed'a
     embedfox.set_image(url = json_data['image']) # Устанавливаем картинку Embed'a
     await ctx.send(embed = embedfox)
-    
+@bot.command(pass_context=True)
+async def dog(ctx):
+    response = requests.get('https://some-random-api.ml/img/dog') # Get-запрос
+    json_data = json.loads(response.text) # Извлекаем JSON
+
+    embeddog = discord.Embed(color = 0xff9900, title = "собячка)))") # Создание Embed'a
+    embeddog.set_image(url = json_data['link']) # Устанавливаем картинку Embed'a
+    await ctx.send(embed = embeddog)
     
 bot.run(TOKEN)

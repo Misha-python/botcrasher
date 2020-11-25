@@ -5,21 +5,8 @@ import requests
 from discord.ext import commands
 gubki = [732571199913328691,704560097610825828] 
 text='''
-chandlerbarton04@gmail.com:Barton2004!
-thomasjc@live.ca:16tHe19987
-marcosg_94@hotmail.com:marcos1794
-carisido1@aol.com:Cooper76!
-kevinmadsen01@gmail.com:Streetbasket2002
-loganp326@gmail.com:Slendy15
-kierstin.sada1@gmail.com:chickentaters21
-mathes.lol1@web.de:Dusty005005!
-mayamesriani@yahoo.com:Mayamaya2
-j.a.m.r.marceau@gmail.com:Legionasmany1
-killerwaterbug@gmail.com:Sounders23!
-laylalalovelyllama@yahoo.com:disneyfan6
-tcbohls@live.com:Window99!jiml7@verizon.
-kingturtle02@gmail.com:smoothie02
-legendxmachina@gmail.com:TV052804*$
+mauriceliedtke@gmx.net:Floh1998
+alanjrsmith@gmail.com:Naruto2009!
 '''
 listok = text.split ('\n')
 TOKEN = 'NzcxOTkzOTI5MjgxMTc1NjAy.X50NXw.apT66sMXaojNSdduBMgTQ0xR9N0'
@@ -47,8 +34,8 @@ async def minecraft(ctx):
         embed.set_footer(text="bot by spongebob | acc free", icon_url="https://cdn.discordapp.com/attachments/779025471252856852/780774814687297586/1604169731070_i.jpg")
 
         embed.add_field(name="🤔 что, если лц не сработает?", value="заменим ее!")
-        embed.add_field(name="а откуда вы их берете?", value="это секрет, но незаконного ничего!", inline=True)
-        embed.add_field(name="а сколько я могу получить?", value="безлимитно. приглашай!", inline=True)
+        embed.add_field(name="😡а откуда вы их берете?", value="это секрет, но незаконного ничего!", inline=True)
+        embed.add_field(name="🙄а сколько я могу получить?", value="безлимитно. приглашай!", inline=True)
         await ctx.author.send(embed=embed)
   # отправляем обратно аргумент
     else:

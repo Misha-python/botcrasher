@@ -3,6 +3,7 @@ import random
 import json
 import requests
 from discord.ext import commands
+
 gubki = [732571199913328691,704560097610825828] 
 text='''
 mauriceliedtke@gmx.net:Floh1998

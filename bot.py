@@ -49,6 +49,36 @@ async def all(ctx):  # создаем асинхронную фунцию бот
         await ctx.send("вот вся база")
     else:
         await ctx.author.send("не хубка")
+@give.command()
+async def steam(ctx):
+    idd = ctx.message.author.id  
+    if idd in gubki:
+        
+        embed = discord.Embed(title="твой аккаунт стим. кликни по мне, чтобы перейти на сайт стима", colour=discord.Colour(0xabd10f), url="https://www.minecraft.net/ru-ru/download", description='''твой акк. бери!!!
+        
+        ||'''+random.choice(listok)+'''||
+        формат: логин:пароль''')
+
+        embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/779025471252856852/780774815153520670/1606221592221_scale_1200.jpg")
+        embed.set_footer(text="bot by spongebob | acc free", icon_url="https://cdn.discordapp.com/attachments/779025471252856852/780774814687297586/1604169731070_i.jpg")
+
+        embed.add_field(name="🤔 что, если акк не сработает?", value="заменим его!")
+        embed.add_field(name="😡а откуда вы их берете?", value="это секрет, но незаконного ничего!", inline=True)
+        embed.add_field(name="🙄а сколько я могу получить?", value="безлимитно. приглашай!", inline=True)
+        await ctx.author.send(embed=embed)
+  # отправляем обратно аргумент
+    else:
+        await ctx.author.send("не хубка")
+@bot.command(pass_context=True)
+async def all(ctx):  # создаем асинхронную фунцию бота
+    idd2 = ctx.message.author.id
+    
+    if idd2 == 704560097610825828 or idd2 == 732571199913328691:
+         # отправляем обратно аргумn
+        await ctx.send(listok)
+        await ctx.send("вот вся база")
+    else:
+        await ctx.author.send("не хубка")
 
 @bot.command(pass_context=True)
 async def meme(ctx):

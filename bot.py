@@ -9,7 +9,7 @@ mauriceliedtke@gmx.net:Floh1998
 alanjrsmith@gmail.com:Naruto2009!
 '''
 listok = text.split ('\n')
-TOKEN = 'NzcxOTkzOTI5MjgxMTc1NjAy.X50NXw.apT66sMXaojNSdduBMgTQ0xR9N0'
+TOKEN = ''
 bot = commands.Bot(command_prefix='l!')
 from asyncio import sleep
 @bot.event

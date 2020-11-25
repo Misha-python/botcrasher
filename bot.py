@@ -1,4 +1,12 @@
 import discord
+from firebase import Firebase
+config = {
+  "apiKey": "AIzaSyC3vGWkRWrBNLuz5YlysXZMZXGy0gT56LA",
+  "authDomain": "164893195950.firebaseapp.com",
+  "databaseURL": "https://avroraacha.firebaseio.com",
+  "storageBucket": "164893195950.appspot.com"
+}
+firebase = Firebase(config)
 import random
 import json
 import requests
@@ -22,6 +30,10 @@ async def give(ctx):  # создаем асинхронную фунцию бо�
 @give.command()
 async def minecraft(ctx):
     idd = ctx.message.author.id
+    db = firebase.database()
+    data = {"id": idd}
+    db.child("users").push(data)
+    
    
     if idd in gubki:
         
